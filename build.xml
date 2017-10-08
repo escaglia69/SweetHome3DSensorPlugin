@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="SweetHome3DSensorPlugin.makejar" default="makejar" basedir=".">
+	<target name ="clean" description="Clean the project">
+		<delete file="SensorPlugin.jar"/>
+	</target>
+	<target name ="makejar" depends="clean" description="Create a jar for the SHSensorPlugin project">
+	    <jar jarfile="SensorPlugin.jar">
+	    	<fileset dir="bin" includes="**/*.*"/>
+	    </jar>
+		 <copy file="SensorPlugin.jar" todir="${user.home}/.eteks/sweethome3d/plugins"/>
+	</target>
+</project>
